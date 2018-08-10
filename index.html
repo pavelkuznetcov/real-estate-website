@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Поиск квартир</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="display: block">
+      <symbol id="add_to_favorites" width="19" height="18" viewBox="0 0 19 18"><path d="M12.1142112,6.33529412 C21.2011677,6.73529412 20.823528,5.60588235 13.7191801,11.2529412 C16.1266335,19.9588235 17.0707329,19.2764706 9.51793789,14.3117647 C1.8943354,19.3235294 2.88563975,20.0529412 5.29309317,11.2529412 C-1.83485714,5.58235294 -2.21249689,6.73529412 6.9216646,6.33529412 C10.0843975,-2.11176471 8.92787578,-2.11176471 12.1142112,6.33529412"/></symbol>
+    </svg>
+    <div class="arrow-return"></div>
+    <header class="main-header">
+      <!-- <div class="main-header__logo">
+      </div> -->
+      <a class="main-header__logo" href="index.html">
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 38.08"><title>logo</title><path d="M180.06,34.85V48.39s-.21.39-.34.61a17,17,0,0,1-1.28,1.86c-1.24,1.55-2.5,2.45-3.57,2.45s-2.33-.9-3.57-2.45A17,17,0,0,1,170,49c-.13-.22-.34-.61-.34-.61V34.85Zm-12.69-1.15v15a1.15,1.15,0,0,0,.12.52c.1.21.29.55.55,1a19.22,19.22,0,0,0,1.46,2.11c1.64,2.05,3.41,3.32,5.37,3.32s3.73-1.27,5.37-3.32a19.22,19.22,0,0,0,1.46-2.11c.26-.43.44-.77.55-1a1.15,1.15,0,0,0,.12-.52v-15a1.15,1.15,0,0,0-1.15-1.15H168.52A1.15,1.15,0,0,0,167.37,33.69Z" transform="translate(-167.37 -27.92)"/><path d="M176,41.77h4.62a1.15,1.15,0,0,1,0,2.31H176v9.81a1.15,1.15,0,1,1-2.31,0V44.08H169.1a1.15,1.15,0,0,1,0-2.31h4.62v-7.5a1.15,1.15,0,0,1,2.31,0v7.5Z" transform="translate(-167.37 -27.92)"/><path d="M176,29.08a1.15,1.15,0,1,0-2.31,0v1.15a1.15,1.15,0,0,0,2.31,0Z" transform="translate(-167.37 -27.92)"/><path d="M176,57.92a1.15,1.15,0,0,0-2.31,0v6.92a1.15,1.15,0,0,0,2.31,0Z" transform="translate(-167.37 -27.92)"/></svg>
+      </a>
+      <div class="main-header__contacts">
+        <a href="tel:8888888898">8 888 88 88 98</a>
+        <p>Звони скорее!</p>
+      </div>
+      <nav class="main-header__navigation">
+        <!-- <input class="state-switch" type="checkbox" id="menu">
+        <label for="menu"></label> -->
+        <input class="state-switch" type="checkbox" id="menu">
+        <label for="menu">
+          <div class="hamburger hamburger-container">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </label>
+        <div class="mobile-menu-overlay"></div>
+        <ul>
+          <li><a href="#">Объекты</a></li>
+          <li><a href="#">Компания</a></li>
+          <li><a href="#">Как купить</a></li>
+          <li><a href="#">Агентам</a></li>
+          <li><a href="#">Регионам</a></li>
+          <li><a href="#">Акции</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="find-appartment">
+        <h1>Найдено <span>665</span> квартир</h1>
+        <div class="find-appartment__sorting">
+          <span>Сортировать по:</span>
+          <button class="sort sort--price" data-sorting-order="desc" type="button">Цене</button>
+          <button class="sort sort--rooms" data-sorting-order="desc" type="button">Комнатам</button>
+        </div>
+        <ul class="find-appartment__appartment-cards">
+          <li data-price="1900000" data-rooms-number="1">
+            <article class="appartment-card" data-availability="reserved" data-discount="no">
+              <div class="discount">
+                <span class="discount__size"></span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon  favorites-icon--checked" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_1.png" alt="">
+              </div>
+              <h3>Студия №44</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">Без<br>отделки</li>
+                <li class="features-list__space">28 м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">12/14<br><i>этаж</i></li>
+              </ul>
+              <p class="price">1 900 000 руб.</p>
+              <p class="availability" data-availability="reserved">забронировано</p>
+            </article>
+          </li>
+          <li data-price="1666666" data-rooms-number="1">
+            <article class="appartment-card" data-availability="available" data-discount="no">
+              <div class="discount">
+                <span class="discount__size"></span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_2.png" alt="">
+              </div>
+              <h3>Однокомнатная №665</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">Базовая<br>отделка</li>
+                <li class="features-list__space">66 м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">7/14<br><i>этаж</i></li>
+              </ul>
+              <p class="price">1 666 666 руб.</p>
+              <p class="availability" data-availability="available">свободно</p>
+            </article>
+          </li>
+          <li data-price="5900000" data-rooms-number="2">
+            <article class="appartment-card" data-availability="sold" data-discount="no">
+              <div class="discount">
+                <span class="discount__size"></span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon  favorites-icon--checked" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_3.png" alt="">
+              </div>
+              <h3>Двухкомнатная №567</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">Черновая<br>отделка</li>
+                <li class="features-list__space">65.6&nbsp;м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">7/14<br> <i>этаж</i></li>
+              </ul>
+              <p class="price">5 900 000 руб.</p>
+              <p class="availability" data-availability="sold">продано</p>
+            </article>
+          </li>
+          <li data-price="12900000" data-rooms-number="3">
+            <article class="appartment-card" data-availability="reserved" data-discount="no">
+              <div class="discount">
+                <span class="discount__size"></span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_4.png" alt="">
+              </div>
+              <h3>Трёхкомнатная №45</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">Без<br>отделки</li>
+                <li class="features-list__space">56 м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">1/14<br><i>этаж</i></li>
+              </ul>
+              <p class="price">12 900 000 руб.</p>
+              <p class="availability" data-availability="reserved">забронировано</p>
+            </article>
+          </li>
+          <li data-price="1900000" data-rooms-number="1">
+            <article class="appartment-card" data-availability="reserved" data-discount="no">
+              <div class="discount">
+                <span class="discount__size"></span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon  favorites-icon--checked" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_5.png" alt="">
+              </div>
+              <h3>Студия №25</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">черновая<br>отделка</li>
+                <li class="features-list__space">18 м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">12/14<br><i>этаж</i></li>
+              </ul>
+              <p class="price">1 900 000 руб.</p>
+              <p class="availability" data-availability="reserved">забронировано</p>
+            </article>
+          </li>
+          <li data-price="23900000" data-rooms-number="4">
+            <article class="appartment-card" data-availability="reserved" data-discount="yes">
+              <div class="discount">
+                <span class="discount__size">-6%</span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_6.png" alt="">
+              </div>
+              <h3>Четырёхкомнатная №259</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">черновая<br>отделка</li>
+                <li class="features-list__space">98 м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">14/14<br><i>этаж</i></li>
+              </ul>
+              <p class="price">23 900 000 руб.</p>
+              <p class="availability" data-availability="reserved">забронировано</p>
+            </article>
+          </li>
+          <li data-price="5666666" data-rooms-number="1">
+            <article class="appartment-card" data-availability="available" data-discount="no">
+              <div class="discount">
+                <span class="discount__size"></span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_7.png" alt="">
+              </div>
+              <h3>Однокомнатная №56</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">без<br>отделки</li>
+                <li class="features-list__space">36 м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">3/6<br><i>этаж</i></li>
+              </ul>
+              <p class="price">5 666 666 руб.</p>
+              <p class="availability" data-availability="available">свободно</p>
+            </article>
+          </li>
+          <li data-price="5696664" data-rooms-number="3">
+            <article class="appartment-card" data-availability="available" data-discount="no">
+              <div class="discount">
+                <span class="discount__size"></span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_8.png" alt="">
+              </div>
+              <h3>Трёхкомнатная №46</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">черновая<br>отделка</li>
+                <li class="features-list__space">86 м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">1/6<br><i>этаж</i></li>
+              </ul>
+              <p class="price">5 696 664 руб.</p>
+              <p class="availability" data-availability="available">свободно</p>
+            </article>
+          </li>
+          <li data-price="1200000" data-rooms-number="1">
+            <article class="appartment-card" data-availability="reserved" data-discount="yes">
+              <div class="discount">
+                <span class="discount__size">-9%</span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_9.png" alt="">
+              </div>
+              <h3>Однокомнатная №2</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">черновая<br>отделка</li>
+                <li class="features-list__space">18 м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">3/14<br><i>этаж</i></li>
+              </ul>
+              <p class="price">1 200 000 руб.</p>
+              <p class="availability" data-availability="reserved">забронировано</p>
+            </article>
+          </li>
+          <li data-price="1500500" data-rooms-number="1">
+            <article class="appartment-card" data-availability="reserved" data-discount="yes">
+              <div class="discount">
+                <span class="discount__size">-6%</span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_10.png" alt="">
+              </div>
+              <h3>Студия №12</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">черновая<br>отделка</li>
+                <li class="features-list__space">38 м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">6/14<br><i>этаж</i></li>
+              </ul>
+              <p class="price">1 500 500 руб.</p>
+              <p class="availability" data-availability="reserved">забронировано</p>
+            </article>
+          </li>
+          <li data-price="6200000" data-rooms-number="1">
+            <article class="appartment-card" data-availability="reserved" data-discount="no">
+              <div class="discount">
+                <span class="discount__size"></span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_11.png" alt="">
+              </div>
+              <h3>Однокомнатная №8</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">черновая<br>отделка</li>
+                <li class="features-list__space">48 м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">3/14<br><i>этаж</i></li>
+              </ul>
+              <p class="price">6 200 000 руб.</p>
+              <p class="availability" data-availability="reserved">забронировано</p>
+            </article>
+          </li>
+          <li data-price="5255006" data-rooms-number="2">
+            <article class="appartment-card" data-availability="reserved" data-discount="no">
+              <div class="discount">
+                <span class="discount__size"></span>
+                <span class="discount__expression">Шок-цена!</span>
+              </div>
+              <svg class="favorites-icon" width="19px" height="18px">
+                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add_to_favorites"></use>
+              </svg>
+              <div class="img-container">
+                <img src="./img/appartment_12.png" alt="">
+              </div>
+              <h3>Двухкомнатная №23</h3>
+              <ul class="features-list">
+                <li class="features-list__finishing">базовая<br>отделка</li>
+                <li class="features-list__space">48 м<sup>2</sup><br><i>площадь</i></li>
+                <li class="features-list__floor">3/14<br><i>этаж</i></li>
+              </ul>
+              <p class="price">5 255 006 руб.</p>
+              <p class="availability" data-availability="reserved">забронировано</p>
+            </article>
+          </li>
+        </ul>
+        <button class="show-more" type="button">Показать ещё 20</button>
+      </section>
+      <section class="subscribe">
+        <div class="subscribe__text">
+          <h2>Успей купить!</h2>
+          <p>Подпишись и успей словить все акции</p>
+        </div>
+        <form class="subscribe__input_area">
+          <input type="text" name="subscribe-email" id="subscribe-email" placeholder="E-mail">
+          <button class="subscribe__button" type="submit" name="button">Подписаться</button>
+          <label for="subscribe-checkbox">
+            <input type="checkbox" name="subscribe-checkbox" value="" id="subscribe-checkbox">
+            <span class="checkbox-indicator"></span>
+            Подписаться на новости
+          </label>
+        </form>
+      </section>
+    </main>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</html>

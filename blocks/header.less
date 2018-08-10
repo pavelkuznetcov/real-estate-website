@@ -1,0 +1,169 @@
+.main-header
+{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 66px;
+
+  max-width: @max_nav_width;
+
+  @media @tablet_widths
+  {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @media @max_width_header
+  {
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &::after
+  {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    z-index: -1;
+    content: "";
+
+    width: 100vw;
+    margin-left: -50vw;
+
+    background-color: @clr_dark_green;
+  }
+}
+
+.main-header__logo
+{
+  display: inline-block;
+
+  padding-top: 21px;
+  padding-right: 50px;
+  padding-bottom: 21px;
+  min-width: 34px;
+
+  vertical-align: top;
+
+}
+
+.main-header__logo
+{
+  fill: @clr_white;
+  // 38.08
+}
+
+.main-header__navigation
+{
+  // position: relative;
+  // padding-top: 50px;
+  // padding-bottom:;
+
+  vertical-align: top;
+
+  @media @full_size_nav_width
+  {
+    padding-right: 50px;
+    order: 2;
+  }
+
+  // line-height: 126px;
+
+  > ul
+  {
+    // display: inline-block;
+    display: none;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @media @full_size_nav_width
+    {
+      display: inline-block;
+    }
+
+    > li
+    {
+      display: inline-block;
+
+      margin-right: 42px;
+
+      &:last-child
+      {
+        margin-right: 0;
+      }
+
+      > a
+      {
+        .text_nav();
+
+        text-decoration: none;
+
+        transition: color 0.3s ease-out;
+
+        &:hover
+        {
+          color: @clr_light_green;
+        }
+        &:active
+        {
+          color: @clr_dark_grey;
+        }
+      }
+    }
+  }
+}
+
+.main-header__contacts
+{
+  display: none;
+
+  padding-right: 50px;
+  min-width: 217px;
+
+  vertical-align: top;
+
+  @media @tablet_widths
+  {
+    display: inline-block;
+  }
+
+  @media @full_size_nav_width
+  {
+    padding-right: 0;
+    order: 3;
+  }
+
+  > a
+  {
+    .text_contacts();
+
+    text-decoration: none;
+
+    transition: color 0.3s ease-out;
+
+    &:hover
+    {
+      color: @clr_light_green;
+    }
+    &:active
+    {
+      color: @clr_dark_grey;
+    }
+  }
+
+  > p
+  {
+    .text_contacts_text();
+
+    margin: 0;
+  }
+}

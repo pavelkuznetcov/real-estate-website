@@ -10,6 +10,9 @@
   margin-bottom: 66px;
 
   max-width: @max_nav_width;
+  min-width: 320px;
+
+  box-sizing: border-box;
 
   @media @tablet_widths
   {
@@ -28,15 +31,25 @@
   {
     position: absolute;
     top: 0;
-    left: 50%;
+    // left: 50%;
+    right: 0;
+    left: 0;
     bottom: 0;
     z-index: -1;
     content: "";
 
-    width: 100vw;
-    margin-left: -50vw;
+    // width: 100vw;
+    // margin-left: -50vw;
 
     background-color: @clr_dark_green;
+
+    @media @max_width_header
+    {
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+    }
+
   }
 }
 

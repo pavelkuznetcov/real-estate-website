@@ -122,29 +122,9 @@ input[type=checkbox].state-switch:checked + label > div > span:nth-child(4) {
   right: 0;
   z-index: 100;
 
-  width: 100vw;
-  height: 100vh;
+  // height: 100vh;
 
   background-color: fadeout(@clr_dark_green, 10%);
-}
-
-input[type=checkbox].state-switch:checked ~ label[for="menu"]
-{
-  &::before
-  {
-    z-index: 101;
-    top: 15px;
-
-    transform: rotate(45deg);
-  }
-
-  &::after
-  {
-    z-index: 101;
-    top: 15px;
-
-    transform: rotate(-45deg);
-  }
 }
 
 input[type=checkbox].state-switch:checked ~ .mobile-menu-overlay
@@ -154,10 +134,12 @@ input[type=checkbox].state-switch:checked ~ .mobile-menu-overlay
 
   min-height: 600px;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 
-  // left: 100%;
-  // margin-left: -100vw;
+  @media @full_size_nav_width
+  {
+    display: none;
+  }
 }
 
 input[type=checkbox].state-switch:checked ~ ul
@@ -165,12 +147,24 @@ input[type=checkbox].state-switch:checked ~ ul
   display: block;
   position: absolute;
   top: 125px;
-  right: 60px;
+  right: 25px;
   z-index: 101;
 
   text-align: right;
 
-  overflow-y: scroll;
+  @media @tablet_widths
+  {
+    right: 65px;
+  }
+  // @media @desktop_widths
+  // {
+  //   position: static;
+  // }
+  @media @full_size_nav_width
+  {
+      position: static;
+      display: inline-block;
+  }
 
   > li
   {
@@ -178,5 +172,19 @@ input[type=checkbox].state-switch:checked ~ ul
 
     margin-right: 0;
     margin-bottom: 30px;
+
+    @media @full_size_nav_width
+    {
+        position: static;
+        display: inline-block;
+
+        margin-right: 42px;
+        margin-bottom: 0;
+
+        &:last-child
+        {
+          margin-right: 0;
+        }
+    }
   }
 }

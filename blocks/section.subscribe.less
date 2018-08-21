@@ -3,10 +3,14 @@ section.subscribe
   display: flex;
   flex-direction: column;
 
-  padding-top: 50px;
-  padding-right: 2*@width_column_1280px;
-  padding-left: @width_column_1280px;
-  padding-bottom: 50px;
+  // padding-top: 50px;
+  // padding-right: 2*@width_column_1280px;
+  // padding-left: @width_column_1280px;
+  // padding-bottom: 50px;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
   margin-bottom: 50px;
 
   max-width: @max_width;
@@ -20,18 +24,28 @@ section.subscribe
     flex-direction: row;
     justify-content: space-between;
 
+    padding-top: 50px;
+    padding-right: @width_column_1280px;
+    padding-left: @width_column_1280px;
+    padding-bottom: 50px;
     margin-bottom: 100px;
   }
 
   @media @desktop_widths
   {
     // padding: 0;
+    padding-right: 2*@width_column_1280px;
     margin-right: auto;
     margin-left: auto;
   }
 
   .subscribe__text
   {
+    @media @tablet_widths
+    {
+      padding-right: 20px;
+    }
+
     > h2
     {
       .text_h2();
@@ -56,9 +70,15 @@ form.subscribe__input_area
 
   font-size: 0;
 
+  @media @tablet_widths
+  {
+    padding-top: 8px;
+  }
+
   @media @desktop_widths
   {
     width: 11*@width_column_1280px;
+    margin-bottom: 0;
   }
 
   > input[type="text"]
@@ -67,9 +87,9 @@ form.subscribe__input_area
 
     display: inline-block;
 
-    width: 6*@width_column_1280px;
+    width: 4*@width_column_1280px;
     padding: 12px 17px;
-    margin-right: @width_column_1280px;
+    // margin-right: @width_column_1280px;
     margin-bottom: 10px;
 
     color: @clr_light_green;
@@ -80,6 +100,17 @@ form.subscribe__input_area
     border-radius: 3px;
 
     box-sizing: border-box;
+
+    @media @tablet_widths
+    {
+      margin-right: 10px;
+    }
+
+    @media @desktop_widths
+    {
+      width: 6*@width_column_1280px;
+      margin-right: @width_column_1280px;
+    }
 
     &::placeholder
     {
@@ -105,6 +136,8 @@ form.subscribe__input_area
     padding-left: 30px;
 
     text-transform: lowercase;
+
+    cursor: pointer;
   }
 
   span.checkbox-indicator
@@ -180,6 +213,8 @@ form.subscribe__input_area
     border-radius: 3px;
 
     outline: none;
+
+    cursor: pointer;
 
     transition: background-color 0.3s ease-out;
 
